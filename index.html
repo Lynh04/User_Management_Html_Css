@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <main class="container">
+        <div class="title">
+            <h1 class="title-text">Quản lí người dùng</h1>
+        </div>
+        <div class="search-add">
+            <div>
+                <div class="search-add-container">
+                    <div class="search-container">
+                        <input id="inputsearch" type="text" placeholder="Tìm kiếm theo tên hoặc email...">
+
+                    </div>
+                    <button id="btnAdd">
+                        Thêm Người Dùng Mới
+                    </button>
+                </div>
+
+            </div>
+            <div class="list-data" id="listData">
+            </div>
+    </main>
+
+    <!-- ===== ADD USER DIALOG ===== -->
+    <dialog id="addUserDialog" class="add-user-dialog">
+        <div class="dialog-content">
+
+            <div class="dialog-header">
+                <h2 id="dialog-title">Add User</h2>
+                <button class="dialog-close" id="closeDialog">×</button>
+            </div>
+
+            <form class="dialog-form" id="addUserForm">
+                <label>Họ và Tên *</label>
+                <input type="text" placeholder="Nhập họ và tên" id="name" />
+
+                <label>Email *</label>
+                <input type="email" placeholder="Nhập email" id="email" />
+
+                <label>Số Điện Thoại *</label>
+                <input type="text" placeholder="Nhập số điện thoại" id="phone" />
+
+                <div class="dialog-actions">
+                    <button type="submit" class="btn-create" id="createDialog">Create User</button>
+                    <button type="button" class="btn-cancel" id="cancelDialog">Hủy</button>
+                </div>
+            </form>
+
+        </div>
+    </dialog>
+
+    <!-- ===== DELETE USER DIALOG ===== -->
+    <dialog id="deleteUserDialog" class="delete-user-dialog">
+        <div class="dialog-content">
+
+            <div class="dialog-header">
+                <h2 class="delete-title">Xác nhận xóa</h2>
+                <button class="dialog-close" id="closeDeleteDialog">×</button>
+            </div>
+
+            <p class="delete-desc">
+                Bạn có chắc chắn muốn xóa người dùng này không?
+            </p>
+
+            <div class="dialog-actions">
+                <button class="btn-delete" id="confirmDelete">Xóa</button>
+                <button class="btn-cancel" id="cancelDelete">Hủy</button>
+            </div>
+
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
